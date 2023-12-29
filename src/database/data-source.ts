@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 import { DataSource } from 'typeorm';
+import { Author } from '../entities/Author';
 
 export const AppDataSource = new DataSource({
 	type: 'mysql',
@@ -11,7 +12,7 @@ export const AppDataSource = new DataSource({
 	database: process.env.DB_DATABASE || 'NetLibrary',
 	logging: true,
 	synchronize: false, //use migrations instead
-	entities: [],
+	entities: [Author],
 	subscribers: [],
 	migrations: ['src/database/migrations/*.ts'],
 });
