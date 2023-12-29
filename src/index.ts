@@ -14,3 +14,6 @@ const PORT = process.env.APP_PORT || 3000;
 app.listen(PORT, () => {
 	console.log(`🎉🎉🎉 App is running on port ${PORT} 🎉🎉🎉`);
 });
+
+// This file only connects to the db and starts the server to listen on the port.
+// It imports the express 'app' from app.ts.
